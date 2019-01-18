@@ -5,6 +5,5 @@ public class TestClass {
 		System.out.println("Utopia");
 		System.out.printf("这里是idea添加");
 		System.out.printf("这里是测试");//hahahaha
-		System.out.printf("another one");
 	}
 }
