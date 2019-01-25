@@ -18,23 +18,23 @@
     <mvc:default-servlet-handler />
      <!--监听http请求 -->
     <mvc:interceptors>
-    	<bean class="com.mmall.common.HttpInterceptor"></bean>
+    	<bean class="utopia.common.HttpInterceptor"></bean>
     </mvc:interceptors>
     
     <!--启动包扫描功能 扫描service和controller dao层用mybatis扫描，这里用不到-->
-    <context:component-scan base-package="com.mmall.controller" /> 
-    <context:component-scan base-package="com.mmall.service" />
+    <context:component-scan base-package="utopia.controller" /> 
+    <context:component-scan base-package="utopia.service" />
   
  
     <!-- 获取spring上下文 bean管理 -->
-    <bean class="com.mmall.common.ApplicationContextHelper" lazy-init="false"></bean>
+    <bean class="utopia.common.ApplicationContextHelper" lazy-init="false"></bean>
     
     <!--定义一个springmvc接口时，会使用@RequestMapping注解，下面的类，可以使@RequestMapping注解能找到对应的接口 -->
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean>
      <!--告诉spring mvc项目，我们该以什么格式返回 -->
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"></bean>  
      <!--返回page的时候处理 -->
-    <bean class="com.mmall.common.SpringExceptionResolver"></bean>
+    <bean class="utopia.common.SpringExceptionResolver"></bean>
      <!--返回json的时候处理 -->
     <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"></bean>    
      <!--返回jsp的时候的处理 视图解析器 -->

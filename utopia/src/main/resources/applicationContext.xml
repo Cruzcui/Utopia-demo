@@ -39,7 +39,7 @@
         </bean>
         <!-- 连接数据库类放置的位置 -->
         <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        	<property name="basePackage" value="com.mmall.dao"></property>
+        	<property name="basePackage" value="utopia.dao"></property>
         	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
         </bean>
         

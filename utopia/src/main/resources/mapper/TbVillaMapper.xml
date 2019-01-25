@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mmall.dao.TbVillaMapper">
-  <resultMap id="BaseResultMap" type="com.mmall.model.TbVilla">
+<mapper namespace="utopia.dao.TbVillaMapper">
+  <resultMap id="DefaultResultMap" type="utopia.model.TbVilla">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="operation_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
@@ -12,7 +12,7 @@
       <arg column="imgPath" javaType="java.lang.String" jdbcType="VARCHAR" />
     </constructor>
   </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.mmall.model.TbVilla">
+  <resultMap id="DefaultMapWithBLOBs" type="utopia.model.TbVilla">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="operation_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
@@ -24,17 +24,17 @@
       <arg column="villa_description" javaType="java.lang.String" jdbcType="LONGVARCHAR" />
     </constructor>
   </resultMap>
-  <sql id="Base_Column_List">
+  <sql id="Default_Column_List">
     id, operation_time, add_userid, villa_name, villa_price, storeId, imgPath
   </sql>
-  <sql id="Blob_Column_List">
+  <sql id="Default_Blob_Column_List">
     villa_description
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="DefaultMapWithBLOBs">
     select 
-    <include refid="Base_Column_List" />
+    <include refid="Default_Column_List" />
     ,
-    <include refid="Blob_Column_List" />
+    <include refid="Default_Blob_Column_List" />
     from tb_villa
     where id = #{id,jdbcType=INTEGER}
   </select>
@@ -42,7 +42,7 @@
     delete from tb_villa
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.mmall.model.TbVilla">
+  <insert id="insert" parameterType="utopia.model.TbVilla">
     insert into tb_villa (id, operation_time, add_userid, 
       villa_name, villa_price, storeId, 
       imgPath, villa_description)
@@ -50,7 +50,7 @@
       #{villaName,jdbcType=VARCHAR}, #{villaPrice,jdbcType=VARCHAR}, #{storeid,jdbcType=INTEGER}, 
       #{imgpath,jdbcType=VARCHAR}, #{villaDescription,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.mmall.model.TbVilla">
+  <insert id="insertSelective" parameterType="utopia.model.TbVilla">
     insert into tb_villa
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -105,7 +105,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mmall.model.TbVilla">
+  <update id="updateByPrimaryKeySelective" parameterType="utopia.model.TbVilla">
     update tb_villa
     <set>
       <if test="operationTime != null">
@@ -132,7 +132,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.mmall.model.TbVilla">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="utopia.model.TbVilla">
     update tb_villa
     set operation_time = #{operationTime,jdbcType=TIMESTAMP},
       add_userid = #{addUserid,jdbcType=INTEGER},
@@ -143,7 +143,7 @@
       villa_description = #{villaDescription,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.mmall.model.TbVilla">
+  <update id="updateByPrimaryKey" parameterType="utopia.model.TbVilla">
     update tb_villa
     set operation_time = #{operationTime,jdbcType=TIMESTAMP},
       add_userid = #{addUserid,jdbcType=INTEGER},

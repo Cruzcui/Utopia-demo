@@ -52,7 +52,7 @@
   </servlet>
   <servlet-mapping>
   	<servlet-name>DruidStatServlet</servlet-name>
-  	<url-pattern>/sys/druid/*</url-pattern>
+  	<url-pattern>/druid/*</url-pattern>
   </servlet-mapping>
   <filter>
   	<filter-name>DruidWebStatFilter</filter-name>
@@ -67,9 +67,11 @@
   	<url-pattern>/*</url-pattern>
   </filter-mapping>
 
+
+<!--  
 	<filter>
 		<filter-name>loginfilter</filter-name>
-		<filter-class>com.mmall.filter.LoginFilter</filter-class>
+		<filter-class>utopia.filter.LoginFilter</filter-class>
 	</filter>
 	
 	<filter-mapping>
@@ -77,7 +79,7 @@
 		<url-pattern>/sys/*</url-pattern>
 		<url-pattern>/admin/*</url-pattern>
 	</filter-mapping>
-  
+ --> 
   
   
   <welcome-file-list>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mmall.dao.TbPermissionMapper">
-  <resultMap id="BaseResultMap" type="com.mmall.model.TbPermission">
+<mapper namespace="utopia.dao.TbPermissionMapper">
+  <resultMap id="DefaultResultMap" type="utopia.model.TbPermission">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="permission_name" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -11,12 +11,12 @@
       <arg column="operator" javaType="java.lang.String" jdbcType="VARCHAR" />
     </constructor>
   </resultMap>
-  <sql id="Base_Column_List">
+  <sql id="Default_Column_List">
     id, permission_name, permission_context, parentId, operation_time, operator
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="DefaultResultMap">
     select 
-    <include refid="Base_Column_List" />
+    <include refid="Default_Column_List" />
     from tb_permission
     where id = #{id,jdbcType=INTEGER}
   </select>
@@ -24,7 +24,7 @@
     delete from tb_permission
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.mmall.model.TbPermission">
+  <insert id="insert" parameterType="utopia.model.TbPermission">
     insert into tb_permission (id, permission_name, permission_context, 
       parentId, operation_time, operator
       )
@@ -32,7 +32,7 @@
       #{parentid,jdbcType=INTEGER}, #{operationTime,jdbcType=TIMESTAMP}, #{operator,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.mmall.model.TbPermission">
+  <insert id="insertSelective" parameterType="utopia.model.TbPermission">
     insert into tb_permission
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -75,7 +75,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mmall.model.TbPermission">
+  <update id="updateByPrimaryKeySelective" parameterType="utopia.model.TbPermission">
     update tb_permission
     <set>
       <if test="permissionName != null">
@@ -96,7 +96,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.mmall.model.TbPermission">
+  <update id="updateByPrimaryKey" parameterType="utopia.model.TbPermission">
     update tb_permission
     set permission_name = #{permissionName,jdbcType=VARCHAR},
       permission_context = #{permissionContext,jdbcType=VARCHAR},

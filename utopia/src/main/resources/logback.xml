@@ -10,7 +10,7 @@
 	<appender name="permission" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${catalina.home}/logs/permission.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>${catalina.home}/logs/permission.%d{yyyy-MM-dd}.log.gz</FileNamePattern>
+			<FileNamePattern>${catalina.home}/logs/utopia.%d{yyyy-MM-dd}.log.gz</FileNamePattern>
 		</rollingPolicy>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
