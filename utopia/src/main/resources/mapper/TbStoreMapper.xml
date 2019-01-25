@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mmall.dao.TbStoreMapper">
+  <resultMap id="BaseResultMap" type="com.mmall.model.TbStore">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="store_name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="store_Addr" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="store_tel" javaType="java.lang.String" jdbcType="CHAR" />
+      <arg column="cityId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="operator" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="operation_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, store_name, store_Addr, store_tel, cityId, operator, operation_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_store
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tb_store
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mmall.model.TbStore">
+    insert into tb_store (id, store_name, store_Addr, 
+      store_tel, cityId, operator, 
+      operation_time)
+    values (#{id,jdbcType=INTEGER}, #{storeName,jdbcType=VARCHAR}, #{storeAddr,jdbcType=VARCHAR}, 
+      #{storeTel,jdbcType=CHAR}, #{cityid,jdbcType=INTEGER}, #{operator,jdbcType=INTEGER}, 
+      #{operationTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mmall.model.TbStore">
+    insert into tb_store
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="storeName != null">
+        store_name,
+      </if>
+      <if test="storeAddr != null">
+        store_Addr,
+      </if>
+      <if test="storeTel != null">
+        store_tel,
+      </if>
+      <if test="cityid != null">
+        cityId,
+      </if>
+      <if test="operator != null">
+        operator,
+      </if>
+      <if test="operationTime != null">
+        operation_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="storeName != null">
+        #{storeName,jdbcType=VARCHAR},
+      </if>
+      <if test="storeAddr != null">
+        #{storeAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="storeTel != null">
+        #{storeTel,jdbcType=CHAR},
+      </if>
+      <if test="cityid != null">
+        #{cityid,jdbcType=INTEGER},
+      </if>
+      <if test="operator != null">
+        #{operator,jdbcType=INTEGER},
+      </if>
+      <if test="operationTime != null">
+        #{operationTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mmall.model.TbStore">
+    update tb_store
+    <set>
+      <if test="storeName != null">
+        store_name = #{storeName,jdbcType=VARCHAR},
+      </if>
+      <if test="storeAddr != null">
+        store_Addr = #{storeAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="storeTel != null">
+        store_tel = #{storeTel,jdbcType=CHAR},
+      </if>
+      <if test="cityid != null">
+        cityId = #{cityid,jdbcType=INTEGER},
+      </if>
+      <if test="operator != null">
+        operator = #{operator,jdbcType=INTEGER},
+      </if>
+      <if test="operationTime != null">
+        operation_time = #{operationTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mmall.model.TbStore">
+    update tb_store
+    set store_name = #{storeName,jdbcType=VARCHAR},
+      store_Addr = #{storeAddr,jdbcType=VARCHAR},
+      store_tel = #{storeTel,jdbcType=CHAR},
+      cityId = #{cityid,jdbcType=INTEGER},
+      operator = #{operator,jdbcType=INTEGER},
+      operation_time = #{operationTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
