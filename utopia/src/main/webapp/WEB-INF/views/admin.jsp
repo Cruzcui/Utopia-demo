@@ -19,9 +19,8 @@
         <div class="navbar-header pull-left">
             <a href="/admin/page.do" class="navbar-brand">
                 <small>
-                    <i class="fa fa-leaf"></i>
-                                       管理员控制台
-                </small>
+                  <i class="fa fa-leaf"></i>心醉乌托邦
+                 </small>
             </a>
         </div>
         <div class="navbar-buttons navbar-header pull-right" role="navigation">
@@ -30,7 +29,6 @@
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         <span class="user-info">
                             <small>欢迎,</small>
-                            Admin
                         </span>
                         <i class="ace-icon fa fa-caret-down"></i>
                     </a>
@@ -42,7 +40,7 @@
                         </li>
                         <li>
                             <a href="profile.html"> <i class="ace-icon fa fa-user"></i>
-                                	个人资料
+                                                                       个人资料
                             </a>
                         </li>
 
@@ -89,38 +87,32 @@
             <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-desktop"></i>
-                    <span class="menu-text"> 权限管理 </span>
+                    <span class="menu-text"> 系统设置</span>
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
+				<b class="arrow"></b>
+				<ul class="submenu">
                     <li class="">
                         <a class="popstyle" href="/sys/dept/dept.page" target="_blank">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            用户管理
+                            <i class="menu-icon fa fa-caret-right"></i>用户管理
                         </a>
                         <b class="arrow"></b>
                     </li>
                     <li class="">
                         <a class="popstyle" href="/sys/role/role.page" target="_blank">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            角色管理
+                            <i class="menu-icon fa fa-caret-right"></i>角色管理
                         </a>
                         <b class="arrow"></b>
                     </li>
                     <li class="">
                         <a class="popstyle" href="/sys/aclModule/acl.page" target="_blank">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            权限管理
+                            <i class="menu-icon fa fa-caret-right"></i>权限管理
                         </a>
                         <b class="arrow"></b>
                     </li>
                     <li class="">
                         <a class="popstyle" href="/sys/log/log.page" target="_blank">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            权限更新记录
+                            <i class="menu-icon fa fa-caret-right"></i>日志管理
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -130,23 +122,58 @@
             <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-desktop"></i>
-                    <span class="menu-text"> 系统管理 </span>
+                    <span class="menu-text">内容管理 </span>
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
+				<b class="arrow"></b>
+				<ul class="submenu">
                     <li class="">
                         <a class="popstyle" href="/config/config.page" target="_blank">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            全局配置管理
+                            <i class="menu-icon fa fa-caret-right"></i>城市管理
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                     <li class="">
+                        <a class="popstyle" href="/config/config.page" target="_blank">
+                            <i class="menu-icon fa fa-caret-right"></i>店面管理
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                     <li class="">
+                        <a class="popstyle" href="/config/config.page" target="_blank">
+                            <i class="menu-icon fa fa-caret-right"></i>时段管理
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                     <li class="">
+                        <a class="popstyle" href="/config/config.page" target="_blank">
+                            <i class="menu-icon fa fa-caret-right"></i>店面管理
                         </a>
                         <b class="arrow"></b>
                     </li>
                 </ul>
             </li>
+ 			<li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-desktop"></i>
+                    <span class="menu-text">预定管理 </span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li class="">
+                        <a class="popstyle" href="/config/config.page" target="_blank">
+                            <i class="menu-icon fa fa-caret-right"></i>订单管理
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>            
         </ul>
+        
+        
+        
         <!-- /.nav-list -->
 
         <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
