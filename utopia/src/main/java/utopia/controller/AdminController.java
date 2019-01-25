@@ -12,6 +12,10 @@ public class AdminController {
 	public ModelAndView index() {
 		return new ModelAndView("admin");
 	}
+	@RequestMapping("/welcome.page")
+	public ModelAndView WelcomePage() {
+		return new ModelAndView("welcomePage");
+	}
 	
 }
 

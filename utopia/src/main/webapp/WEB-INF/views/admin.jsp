@@ -78,7 +78,7 @@
 
         <ul class="nav nav-list">
             <li class="active">
-                <a class="popstyle" href="/sys/user/page.do" target="_blank">
+                <a class="popstyle" href="/admin/welcome.page" target="_blank">
                     <i class="menu-icon fa fa-tachometer"></i>
                     <span class="menu-text"> 首页 </span>
                 </a>
@@ -190,7 +190,7 @@
     </div>
 
     <div class="main-content">
-        <iframe id="innerFrame" src="/sys/dept/dept.page" width="99%" style="min-height: 768px;"></iframe>
+        <iframe id="innerFrame" src="/admin/welcome.page" width="99%" style="min-height: 768px;"></iframe>
     </div>
     <!-- /.main-content -->
 
