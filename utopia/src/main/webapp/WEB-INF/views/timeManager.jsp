@@ -6,6 +6,6 @@
   <jsp:include page="/common/backend_common.jsp"/>
 </head>
 <body>
-	用户管理
+	时段管理
 </body>
 </html>

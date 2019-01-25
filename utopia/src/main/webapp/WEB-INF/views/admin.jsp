@@ -93,25 +93,25 @@
 				<b class="arrow"></b>
 				<ul class="submenu">
                     <li class="">
-                        <a class="popstyle" href="/sys/dept/dept.page" target="_blank">
+                        <a class="popstyle" href="/sys/user/userManager.page" target="_blank">
                             <i class="menu-icon fa fa-caret-right"></i>用户管理
                         </a>
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a class="popstyle" href="/sys/role/role.page" target="_blank">
+                        <a class="popstyle" href="/sys/role/roleManager.page" target="_blank">
                             <i class="menu-icon fa fa-caret-right"></i>角色管理
                         </a>
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a class="popstyle" href="/sys/aclModule/acl.page" target="_blank">
+                        <a class="popstyle" href="/sys/permission/permissionManager.page" target="_blank">
                             <i class="menu-icon fa fa-caret-right"></i>权限管理
                         </a>
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a class="popstyle" href="/sys/log/log.page" target="_blank">
+                        <a class="popstyle" href="/sys/log/logManager.page" target="_blank">
                             <i class="menu-icon fa fa-caret-right"></i>日志管理
                         </a>
                         <b class="arrow"></b>
@@ -128,26 +128,26 @@
 				<b class="arrow"></b>
 				<ul class="submenu">
                     <li class="">
-                        <a class="popstyle" href="/config/config.page" target="_blank">
+                        <a class="popstyle" href="/content/city/cityManager.page" target="_blank">
                             <i class="menu-icon fa fa-caret-right"></i>城市管理
                         </a>
                         <b class="arrow"></b>
                     </li>
                      <li class="">
-                        <a class="popstyle" href="/config/config.page" target="_blank">
+                        <a class="popstyle" href="/content/store/storeManager.page" target="_blank">
                             <i class="menu-icon fa fa-caret-right"></i>店面管理
                         </a>
                         <b class="arrow"></b>
                     </li>
                      <li class="">
-                        <a class="popstyle" href="/config/config.page" target="_blank">
+                        <a class="popstyle" href="/content/time/timeManager.page" target="_blank">
                             <i class="menu-icon fa fa-caret-right"></i>时段管理
                         </a>
                         <b class="arrow"></b>
                     </li>
                      <li class="">
-                        <a class="popstyle" href="/config/config.page" target="_blank">
-                            <i class="menu-icon fa fa-caret-right"></i>店面管理
+                        <a class="popstyle" href="/content/villa/villaManager.page" target="_blank">
+                            <i class="menu-icon fa fa-caret-right"></i>别墅管理
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -163,7 +163,7 @@
                 <b class="arrow"></b>
                 <ul class="submenu">
                     <li class="">
-                        <a class="popstyle" href="/config/config.page" target="_blank">
+                        <a class="popstyle" href="/reserve/order/orderManager.page" target="_blank">
                             <i class="menu-icon fa fa-caret-right"></i>订单管理
                         </a>
                         <b class="arrow"></b>
