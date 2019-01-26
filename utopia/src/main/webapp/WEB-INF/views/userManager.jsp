@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <jsp:include page="/common/backend_common.jsp"/>
+ <jsp:include page="/common/backend_common.jsp"/>
 </head>
 <body>
-	用户管理
+	<h1>用户管理</h1>
 </body>
 </html>

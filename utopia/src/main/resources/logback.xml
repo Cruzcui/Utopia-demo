@@ -7,7 +7,7 @@
 		</encoder>
 	</appender>
 	
-	<appender name="permission" class="ch.qos.logback.core.rolling.RollingFileAppender">
+	<appender name="utopia" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${catalina.home}/logs/permission.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<FileNamePattern>${catalina.home}/logs/utopia.%d{yyyy-MM-dd}.log.gz</FileNamePattern>
@@ -18,7 +18,7 @@
 	</appender>
 	
 	<logger name="xxx" level="INFO">
-		<appender-ref ref="permission"/>
+		<appender-ref ref="utopia"/>
 	</logger>
 	
 	

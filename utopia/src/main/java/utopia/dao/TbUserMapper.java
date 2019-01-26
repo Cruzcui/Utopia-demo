@@ -1,5 +1,7 @@
 package utopia.dao;
 
+import org.apache.ibatis.annotations.Param;
+
 import utopia.model.TbUser;
 
 public interface TbUserMapper {
@@ -14,4 +16,6 @@ public interface TbUserMapper {
     int updateByPrimaryKeySelective(TbUser record);
 
     int updateByPrimaryKey(TbUser record);
+    
+    TbUser findByKeyword(@Param("keyword") String keyword);
 }

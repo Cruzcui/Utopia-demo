@@ -68,7 +68,7 @@
   </filter-mapping>
 
 
-<!--  
+ 
 	<filter>
 		<filter-name>loginfilter</filter-name>
 		<filter-class>utopia.filter.LoginFilter</filter-class>
@@ -78,9 +78,11 @@
 		<filter-name>loginfilter</filter-name>
 		<url-pattern>/sys/*</url-pattern>
 		<url-pattern>/admin/*</url-pattern>
+		<url-pattern>/content/*</url-pattern>
+		<url-pattern>/reserve/*</url-pattern>
 	</filter-mapping>
- --> 
-  
+
+
   
   <welcome-file-list>
   	<welcome-file>index.jsp</welcome-file>

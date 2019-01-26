@@ -92,4 +92,13 @@
       operation_time = #{operationTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <select id="findByKeyword" parameterType="String" resultMap="DefaultResultMap">
+  	select 
+  	<include refid="Default_Column_List" />
+    from tb_user
+    where user_name = #{keyword}
+  </select>
+  
+  
 </mapper>
