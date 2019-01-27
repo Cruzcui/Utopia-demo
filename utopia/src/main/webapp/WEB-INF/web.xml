@@ -72,6 +72,10 @@
 	<filter>
 		<filter-name>loginfilter</filter-name>
 		<filter-class>utopia.filter.LoginFilter</filter-class>
+		<init-param>
+  		<param-name>exclusions</param-name>
+  		<param-value>*.js,*.css,*.jpg,*.png,*.ico,*.gif</param-value>
+  	</init-param>
 	</filter>
 	
 	<filter-mapping>
@@ -81,6 +85,8 @@
 		<url-pattern>/content/*</url-pattern>
 		<url-pattern>/reserve/*</url-pattern>
 	</filter-mapping>
+
+
 
 
   

@@ -33,7 +33,7 @@ public class LoginFilter implements Filter {
 			response.sendRedirect(path);
 			return;
 		}
-		
+		System.out.println("aa");
 		//保存用户信息
 		RequestHolder.add(user);
 		RequestHolder.add(request);

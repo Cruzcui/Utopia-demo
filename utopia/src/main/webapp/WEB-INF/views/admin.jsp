@@ -226,7 +226,7 @@
 </script>
 <![endif]-->
 
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="/bootstrap3.3.5/js/bootstrap.min.js"></script>
 
 <!-- page specific plugin scripts -->
 
